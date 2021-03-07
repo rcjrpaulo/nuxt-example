@@ -59,6 +59,18 @@
     <hr>
     <multiselect v-model="value" :options="options"></multiselect>
 
+    <hr>
+    <span>v-money</span>
+    <money
+      v-model="valor"
+      v-bind="money"
+      name="valor"
+      id="valor"
+      placeholder="Valor"
+    />
+    <br>
+    <span>v-money valor: {{ valor }}</span>
+
   </div>
 </template>
 
@@ -70,7 +82,16 @@ export default {
       date_today: new Date(),
       value: null,
       options: ['list', 'of', 'options'],
-      slider_value: 0
+      slider_value: 0,
+      valor: '',
+      money: {
+        decimal: ',',
+        thousands: '.',
+        prefix: 'R$ ',
+        suffix: '',
+        precision: 2,
+        masked: false
+      }
     }
   },
   methods: {
