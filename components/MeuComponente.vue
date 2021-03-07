@@ -6,12 +6,20 @@
 
     <NuxtLink class="btn btn-primary" to="/testes">Ir para Teste</NuxtLink>
 
-    <a @click="toast('dispara toast')" href="javascript:void(0)" class="btn btn-primary">
-      Toast
+    <a @click="toast('Toast normal')" href="javascript:void(0)" class="btn btn-primary">
+      Toast normal
     </a>
 
-    <a @click="toastSuccess('dispara toast')" href="javascript:void(0)" class="btn btn-success">
-      Toast
+    <a @click="toastInfo('Toast Info')" href="javascript:void(0)" class="btn btn-primary">
+      Toast Info
+    </a>
+
+    <a @click="toastSuccess('Toast Sucesso')" href="javascript:void(0)" class="btn btn-success">
+      Toast Sucesso
+    </a>
+
+    <a @click="toastError('Toast Erro')" href="javascript:void(0)" class="btn btn-danger">
+      Toast Erro
     </a>
   </div>
 </template>
@@ -31,8 +39,14 @@ export default {
     toast(texto) {
       this.$toasted.show(texto)
     },
+    toastInfo(texto) {
+      this.$toasted.info(texto)
+    },
     toastSuccess(texto) {
       this.$toasted.success(texto)
+    },
+    toastError(texto) {
+      this.$toasted.error(texto)
     }
   }
 }

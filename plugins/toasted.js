@@ -3,5 +3,5 @@ import Toasted  from "vue-toasted";
 
 
 Vue.use(Toasted, {
-  duration: 900
+  duration: 1500
 })
