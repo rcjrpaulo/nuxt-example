@@ -31,6 +31,7 @@ export default {
     {src: '~/plugins/vue-notification.js', ssr: false},
     {src: '~/plugins/vue-multiselect.js', ssr: false},
     {src: '~/plugins/v-money.js', ssr: false},
+    {src: '~/plugins/v-mask.js', ssr: false},
     {src: '~/plugins/vue-slider-component.js', ssr: false}
   ],
 

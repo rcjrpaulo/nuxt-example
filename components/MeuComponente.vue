@@ -71,6 +71,13 @@
     <br>
     <span>v-money valor: {{ valor }}</span>
 
+    <hr>
+    <span>v-mask data ....</span>
+    <input type="text" v-mask="'##/##/####'" v-model="maskdata">
+    <br>
+    <span>v-mask celular</span>
+    <input type="text" v-mask="'(##) ######-####'" v-model="maskcelular">
+
   </div>
 </template>
 
@@ -83,6 +90,8 @@ export default {
       value: null,
       options: ['list', 'of', 'options'],
       slider_value: 0,
+      maskdata: '',
+      maskcelular: '',
       valor: '',
       money: {
         decimal: ',',
