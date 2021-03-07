@@ -52,6 +52,9 @@
       Vue Notification
     </a>
 
+    <hr>
+    <multiselect v-model="value" :options="options"></multiselect>
+
   </div>
 </template>
 
@@ -61,6 +64,8 @@ export default {
     return {
       variavel: 'texto',
       date_today: new Date(),
+      value: null,
+      options: ['list', 'of', 'options'],
       slider_value: 0
     }
   },
@@ -90,8 +95,12 @@ export default {
 }
 </script>
 
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+
+
 <style>
  h1 {
    color: blue;
  }
 </style>
+
