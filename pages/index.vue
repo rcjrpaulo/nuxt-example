@@ -1,5 +1,5 @@
 <template>
-  <MeuComponente />
+  <meu-componente />
 </template>
 
 <script>
