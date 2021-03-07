@@ -20,7 +20,8 @@
 export default {
   data() {
     return {
-      variavel: 'texto'
+      variavel: 'texto',
+      date_today: null
     }
   },
   methods: {
