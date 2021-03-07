@@ -34,6 +34,10 @@
     <p>
       valor do datepicker: {{ date_today }}
     </p>
+
+    <p>
+      valor do moment... : {{ $moment(date_today).format('DD/MM/YYYY') }}
+    </p>
     <hr>
 
     <a @click="sweetAlert('Teste Sweet Alert')" href="javascript:void(0)" class="btn btn-primary">

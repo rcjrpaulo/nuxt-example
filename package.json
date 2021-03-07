@@ -21,5 +21,7 @@
     "vuejs-datepicker": "^1.6.2",
     "weekstart": "^1.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/moment": "^1.6.1"
+  }
 }
