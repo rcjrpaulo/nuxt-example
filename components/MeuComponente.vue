@@ -80,6 +80,10 @@
     <span>v-mask celular</span>
     <input class="form-control" type="text" v-mask="'(##) ######-####'" v-model="maskcelular">
 
+    <hr>
+    <p>Highcharts</p>
+    <highcharts :options="chartOptions"></highcharts>
+
   </div>
 </template>
 
@@ -102,6 +106,11 @@ export default {
         suffix: '',
         precision: 2,
         masked: false
+      },
+      chartOptions: {
+        series: [{
+          data: [1,2,3] // sample data
+        }]
       }
     }
   },
