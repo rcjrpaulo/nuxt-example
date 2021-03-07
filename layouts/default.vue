@@ -2,6 +2,7 @@
   <div class="container-fluid">
     <div class="card">
       <Nuxt />
+      <notifications/>
     </div>
   </div>
 </template>

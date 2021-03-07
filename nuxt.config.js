@@ -28,6 +28,7 @@ export default {
     {src: '~/plugins/vue-datepicker.js', ssr: false},
     {src: '~/plugins/toasted.js', ssr: false},
     {src: '~/plugins/sweetalert.js', ssr: false},
+    {src: '~/plugins/vue-notification.js', ssr: false},
     {src: '~/plugins/vue-slider-component.js', ssr: false}
   ],
 

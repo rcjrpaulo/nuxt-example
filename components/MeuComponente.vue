@@ -46,6 +46,12 @@
     <p>
       Valor do slider: {{ slider_value }}
     </p>
+
+    <hr>
+    <a @click="vueNotification('Vue Notification')" href="javascript:void(0)" class="btn btn-primary">
+      Vue Notification
+    </a>
+
   </div>
 </template>
 
@@ -76,6 +82,9 @@ export default {
     },
     sweetAlert(texto) {
       this.$swal(texto);
+    },
+    vueNotification(text) {
+      this.$notify(text);
     }
   }
 }
