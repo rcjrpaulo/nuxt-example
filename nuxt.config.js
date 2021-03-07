@@ -27,7 +27,8 @@ export default {
   plugins: [
     {src: '~/plugins/vue-datepicker.js', ssr: false},
     {src: '~/plugins/toasted.js', ssr: false},
-    {src: '~/plugins/sweetalert.js', ssr: false}
+    {src: '~/plugins/sweetalert.js', ssr: false},
+    {src: '~/plugins/vue-slider-component.js', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -34,12 +34,18 @@
     <p>
       valor do datepicker: {{ date_today }}
     </p>
-
     <hr>
 
     <a @click="sweetAlert('Teste Sweet Alert')" href="javascript:void(0)" class="btn btn-primary">
       Sweet Alert
     </a>
+
+    <hr>
+
+    <vue-slider ref="slider" v-model="slider_value"></vue-slider>
+    <p>
+      Valor do slider: {{ slider_value }}
+    </p>
   </div>
 </template>
 
@@ -48,7 +54,8 @@ export default {
   data() {
     return {
       variavel: 'texto',
-      date_today:new Date()
+      date_today: new Date(),
+      slider_value: 0
     }
   },
   methods: {
