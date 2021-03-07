@@ -84,11 +84,20 @@
     <p>Highcharts</p>
     <highcharts :options="chartOptions"></highcharts>
 
+    <hr>
+    <p>Checa CPF é válido</p>
+    <input type="text" class="form-control" v-model="cpf_number">
+    <a @click="checkCpfIsValid" href="javascript:void(0)" class="btn btn-primary">Validar</a>
+    <p :class="cpf_is_valid ? 'text-success' : 'text-danger'">{{ cpf_is_valid ? 'VÁLIDO' : 'INVÁLIDO'}}</p>
+
   </div>
 </template>
 
 <script>
+import {cpf} from "cpf-cnpj-validator";
+
 export default {
+
   data() {
     return {
       variavel: 'texto',
@@ -98,6 +107,8 @@ export default {
       slider_value: 0,
       maskdata: '',
       maskcelular: '',
+      cpf_number: '',
+      cpf_is_valid: false,
       valor: '',
       money: {
         decimal: ',',
@@ -135,6 +146,9 @@ export default {
     },
     vueNotification(text) {
       this.$notify(text);
+    },
+    checkCpfIsValid() {
+      this.cpf_is_valid = cpf.isValid(this.cpf_number)
     }
   }
 }
