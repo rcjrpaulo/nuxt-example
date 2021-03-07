@@ -2,6 +2,8 @@
   <div>
     <h1>Meu componente</h1>
 
+    <hr>
+
     <a @click="meuMetodo('texto passado')" href="javascript:void(0)" class="btn btn-warning">{{ variavel }}</a>
 
     <NuxtLink class="btn btn-primary" to="/testes">Ir para Teste</NuxtLink>
@@ -21,6 +23,18 @@
     <a @click="toastError('Toast Erro')" href="javascript:void(0)" class="btn btn-danger">
       Toast Erro
     </a>
+
+    <br><br>
+    <hr>
+
+    <date-picker
+      placeholder="MM/DD/YYYY"
+      format="MM/dd/yyyy"
+      v-model="date_today" />
+
+    <p>
+      valor do datepicker: {{ date_today }}
+    </p>
   </div>
 </template>
 
@@ -29,7 +43,7 @@ export default {
   data() {
     return {
       variavel: 'texto',
-      date_today: null
+      date_today:new Date()
     }
   },
   methods: {
