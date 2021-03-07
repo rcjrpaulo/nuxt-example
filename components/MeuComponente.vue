@@ -34,6 +34,12 @@
     <p>
       valor do datepicker: {{ date_today }}
     </p>
+
+    <hr>
+
+    <a @click="sweetAlert('Teste Sweet Alert')" href="javascript:void(0)" class="btn btn-primary">
+      Sweet Alert
+    </a>
   </div>
 </template>
 
@@ -60,6 +66,9 @@ export default {
     },
     toastError(texto) {
       this.$toasted.error(texto)
+    },
+    sweetAlert(texto) {
+      this.$swal(texto);
     }
   }
 }
