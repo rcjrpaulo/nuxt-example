@@ -4,9 +4,9 @@
 
     <hr>
 
-    <a @click="meuMetodo('texto passado')" href="javascript:void(0)" class="btn btn-warning">{{ variavel }}</a>
-
     <NuxtLink class="btn btn-primary" to="/testes">Ir para Teste</NuxtLink>
+
+    <hr>
 
     <a @click="toast('Toast normal')" href="javascript:void(0)" class="btn btn-primary">
       Toast normal
@@ -24,7 +24,6 @@
       Toast Erro
     </a>
 
-    <br><br>
     <hr>
 
     <date-picker
