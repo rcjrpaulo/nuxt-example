@@ -27,6 +27,7 @@
     <hr>
 
     <date-picker
+      input-class="form-control"
       placeholder="MM/DD/YYYY"
       format="MM/dd/yyyy"
       v-model="date_today" />
@@ -62,6 +63,7 @@
     <hr>
     <span>v-money</span>
     <money
+      class="form-control"
       v-model="valor"
       v-bind="money"
       name="valor"
@@ -73,10 +75,10 @@
 
     <hr>
     <span>v-mask data ....</span>
-    <input type="text" v-mask="'##/##/####'" v-model="maskdata">
+    <input class="form-control" type="text" v-mask="'##/##/####'" v-model="maskdata">
     <br>
     <span>v-mask celular</span>
-    <input type="text" v-mask="'(##) ######-####'" v-model="maskcelular">
+    <input class="form-control" type="text" v-mask="'(##) ######-####'" v-model="maskcelular">
 
   </div>
 </template>
